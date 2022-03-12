@@ -31,15 +31,14 @@ int handle_event(int arg0, int arg1)
 4. 在`stdafx.h`中放置项目中使用较多的系统和第三方的依赖头，**经常改动的头文件不要放在里面**
 5. 包含头文件时应加上文件相对路径，如`#include "base/logging.h"`，而不是`#include "logging.h"`
 6. 对于`xxx.cpp`，头文件包含顺序应为：
-
-    ```text
-    xxx.h
-    OS SDK.h
-    C标准库.h
-    C++标准库.h
-    其他第三方库.h
-    本项目内.h
-    ```
+```text
+xxx.h
+OS SDK.h
+C标准库.h
+C++标准库.h
+其他第三方库.h
+本项目内.h
+```
 
 #### 前置声明
 
@@ -130,36 +129,36 @@ private:
 
     不管是静态的还是非静态的, 结构体数据成员都可以和普通变量一样, 不用像类那样接下划线，全部小写字母，下划线分词，如：
 
-    ```C++
-    std::string table_name;
+```C++
+std::string table_name;
 
-    struct UrlTableProperties {
-        string name;
-        int num_entries;
-        static Pool<UrlTableProperties>* pool;
-    };
-    ```
+struct UrlTableProperties {
+string name;
+int num_entries;
+static Pool<UrlTableProperties>* pool;
+};
+```
 
 - 2.3.1 类数据成员
 
     不管是静态的还是非静态的, 类数据成员都可以和普通变量一样, 但要接下划线，变量名后加一个下划线_，如：
 
-    ```C++
-    class TableInfo {
-    private:
-        string table_name_;
-        string tablename_;
-        static Pool<TableInfo>* pool_;
-    };
-    ```
+```C++
+class TableInfo {
+private:
+    string table_name_;
+    string tablename_;
+    static Pool<TableInfo>* pool_;
+};
+```
 
 - 2.3.2 指针变量
 
     用p打头，如：
 
-    ```C++
-    unsigned char* p_gpu_memory;
-    ```
+```C++
+unsigned char* p_gpu_memory;
+```
 
 #### 3.5 宏、枚举值
 
