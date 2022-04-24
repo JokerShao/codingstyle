@@ -362,7 +362,7 @@ Python之父Guido推荐的规范
 |Global/Class Variables|global_var_name/lower_with_under|_lower_with_under|
 |Instance Variables|lower_with_under|_lower_with_under (protected) or __lower_with_under (private)|
 |Method Names|lower_with_under()|_lower_with_under() (protected) or __lower_with_under() (private)|
-|Function/Method Parameters|lower_with_under|	 
+|Function/Method Parameters|lower_with_under|
 |Local Variables|lower_with_under|
 
 #### 2.0 包命名
